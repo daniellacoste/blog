@@ -53,4 +53,4 @@ CREATE TABLE views (
 2. Please do not copy it directly.
 3. Crediting the author is appreciated.
 
-Please remove all of my personal information (blog posts, images, etc.) by running `bun run setup`.
+Please remove all of my personal information (blog posts, images, etc.) by running `bun run setup`
