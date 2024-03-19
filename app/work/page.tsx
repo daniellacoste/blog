@@ -9,31 +9,31 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section>
+      <h1 className="font-medium text-2xl mb-8 tracking-tighter">work</h1>
       <div className="prose prose-neutral dark:prose-invert">
-        <p>
-          A computer scientist with a passion for customer success, mobile apps,
-          developer experience, and design engineering.
-        </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">TruckSmarter</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           Support Engineer (Mobile Platform)
         </p>
         <p>
-          TruckSmarter is building the financial operating system for America's
-          independent owner-operators. I joined <Link
-          href="https://www.trucksmarter.com">TruckSmarter</Link> in 2022 to
-          manage the weekly release of the TruckSmarter mobile app. I work
-          closely with engineering, product, design, and operations to ensure
-          the app is released without bugs or regressions every week.  I support
-          our user operations team to troubleshoot and triage user issues.
+          <Link
+          href="https://www.trucksmarter.com">TruckSmarter</Link>TruckSmarter is
+          building the financial operating system for America's independent
+          owner-operators. I joined TruckSmarter in 2022 to manage the weekly
+          release of the TruckSmarter mobile app. I work closely with
+          engineering, product, design, and operations to ensure the app is
+          released without bugs or regressions every week. I support our user
+          operations team to troubleshoot and triage user issues. I also
+          administer an 900+ member <Link
+          href="https://discord.gg/trucksmarter">Discord community</Link> for
+          TruckSmarter users.
         </p>
         <p>
-          Since I joined TruckSmarter in 2022, the platform has grown to include
-          multiple products (Load Board, Factoring, Fuel) that are used by
-          hard-working carriers all across the United States. I am proud to be a
-          part of a passionate team that is helping owner-operators succeed on
-          the road.
+          Since joining, the platform has grown to include multiple products
+          (Load Board, Factoring, Fuel) that are used by hard-working carriers
+          all across the United States. I am proud to be a part of a passionate
+          team that is helping owner-operators succeed on the road.
         </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">Plaid</h2>
@@ -55,12 +55,13 @@ export default function Page() {
           Solutions Engineer • 2021 — 2022
         </p>
           I joined the Solutions Engineering team in 2021 to continue my work as
-          a Plaid product expert. I provided hands-on support for customers that
-          were in the early stages of their Plaid integration by guiding them
-          from receiving their API keys all the way to shipping production traffic.
+          a Plaid product expert. I provided hands-on support for customers new
+          to Plaid by guiding them from receiving their API keys all the way to
+          shipping production traffic.
         <p>
-          Plaid's culture was the highlight of my 4.5 years — I was so lucky to
-          work with a world-class team! I shared more about my experience on the <Link
+          Plaid's culture was the highlight of my 4.5 years — I was so fortunate
+          to work with a world-class team! I shared more about my experience on
+          the <Link
           href="https://plaid.com/blog/daniel-lacoste-on-the-reward-of-helping-others/">official
           Plaid blog</Link>.
         </p>
