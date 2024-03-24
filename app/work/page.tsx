@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-        work
+        experience 
       </h1>
       <div className="prose prose-neutral dark:prose-invert">
         <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
@@ -22,21 +22,47 @@ export default function Page() {
         </p>
         <p>
           TruckSmarter is building the financial operating system for America's
-          independent owner-operators. I am responsible for managing the weekly
-          release of the TruckSmarter mobile app. I work closely with
-          engineering, product, design, and operations to ensure the app meets
-          our quality requirements and is released without bugs. I help support
-          our user operations team with troubleshooting user issues and I am the
-          administrator 900+ member <Link
-          href="https://discord.gg/trucksmarter">Discord community</Link> for
-          TruckSmarter users.
+          independent owner-operators. Since joining, the TruckSmarter platform
+          has grown to include multiple products (Load Board, Factoring,
+          Banking, Fuel) that are used by hard-working carriers all across the
+          United States. I am proud to be a part of a passionate team that is
+          helping owner-operators succeed on the road. Working at a startup is
+          the optimal way to be responsible for many things — here is a list of
+          the many hats I've worn at TruckSmarter:
         </p>
+        <ul>
+          <li>
+            I am responsible for managing the weekly release of the TruckSmarter
+            mobile app for both the Apple App Store and Google Play Store.
+          </li>
+          <li>
+            I work cross-functionally with engineering and design to ensure a high
+            quality UX is maintained across versions.
+          </li>
+          <li>
+            Core maintainer of TruckSmarter's <Link
+            href="https://github.com/storybookjs/react-native">Storybook React
+            Native</Link> component library.
+          </li>
+          <li>
+            Actively contribute to the design system by improving our components
+            at the <Link
+            href="https://atomicdesign.bradfrost.com/table-of-contents/">atomic
+            level</Link> — I am especially interested in the organization of
+            typography, colors, spacing, and more.
+          </li>
+          <li>
+            Act as an escalation support engineer for the user operations team
+            across all TruckSmarter products.
+          </li>
+          <li>
+            I am the administrator of our 900+ member <Link
+            href="https://discord.gg/trucksmarter">Discord community</Link> and
+            the weekly moderator for a live Q&A with users to learn more about
+            their lives and gather product feedback.
+          </li>
+        </ul>
         <p>
-          Since joining, the TruckSmarter platform has grown to include multiple
-          products (Load Board, Factoring, Banking, Fuel) that are used by
-          hard-working carriers all across the United States. I am proud to be a
-          part of a passionate team that is helping owner-operators succeed on
-          the road.
         </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
@@ -85,7 +111,10 @@ export default function Page() {
         </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
         <h2 className="font-medium text-xl mb-1 tracking-tighter">
-          <Link href="https://www.bravurasecurity.com/">Bravura Systems</Link> (fka Hitachi ID Systems)
+          <Link href="https://www.bravurasecurity.com/">Bravura Systems</Link> 
+          <span className="font-medium text-base mb-1 tracking-tighter">
+            {' '}(fka Hitachi ID Systems)
+          </span>
         </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           Support Engineer (Internship) • 2015 — 2016 

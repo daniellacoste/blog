@@ -5,7 +5,7 @@ import { getViewsCount } from 'app/db/queries';
 import { getBlogPosts } from 'app/db/blog';
 
 export const metadata = {
-  title: 'Blog',
+  title: 'Thoughts',
   description: 'Read my thoughts on software development, design, and more.',
 };
 
@@ -15,7 +15,7 @@ export default function BlogPage() {
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-        read my blog
+        miscellaneous thoughts 
       </h1>
       {allBlogs
         .sort((a, b) => {
