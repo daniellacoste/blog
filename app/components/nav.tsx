@@ -10,6 +10,9 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
+  '/photography': {
+    name: 'photography',
+  },
 };
 
 export function Navbar() {
