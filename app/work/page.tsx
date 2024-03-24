@@ -9,55 +9,60 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">work</h1>
+      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+        work
+      </h1>
       <div className="prose prose-neutral dark:prose-invert">
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">TruckSmarter</h2>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <Link href="https://www.trucksmarter.com">TruckSmarter</Link>
+        </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Support Engineer (Mobile Platform)
+          Support Engineer (Mobile Platform) • 2022 — Present
         </p>
         <p>
-          <Link
-          href="https://www.trucksmarter.com">TruckSmarter</Link>TruckSmarter is
-          building the financial operating system for America's independent
-          owner-operators. I joined TruckSmarter in 2022 to manage the weekly
+          TruckSmarter is building the financial operating system for America's
+          independent owner-operators. I am responsible for managing the weekly
           release of the TruckSmarter mobile app. I work closely with
-          engineering, product, design, and operations to ensure the app is
-          released without bugs or regressions every week. I support our user
-          operations team to troubleshoot and triage user issues. I also
-          administer an 900+ member <Link
+          engineering, product, design, and operations to ensure the app meets
+          our quality requirements and is released without bugs. I help support
+          our user operations team with troubleshooting user issues and I am the
+          administrator 900+ member <Link
           href="https://discord.gg/trucksmarter">Discord community</Link> for
           TruckSmarter users.
         </p>
         <p>
-          Since joining, the platform has grown to include multiple products
-          (Load Board, Factoring, Fuel) that are used by hard-working carriers
-          all across the United States. I am proud to be a part of a passionate
-          team that is helping owner-operators succeed on the road.
+          Since joining, the TruckSmarter platform has grown to include multiple
+          products (Load Board, Factoring, Banking, Fuel) that are used by
+          hard-working carriers all across the United States. I am proud to be a
+          part of a passionate team that is helping owner-operators succeed on
+          the road.
         </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Plaid</h2>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <Link href="https://www.plaid.com">Plaid</Link>
+        </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Technical Support Engineer • 2017 — 2021
+          Solutions Engineer • 2021 — 2022
+        </p>
+        <p>
+          In 2021, I moved to the Solutions Engineering to continue my work as a
+          Plaid product expert. I provided hands-on support for customers new to
+          Plaid, from receiving their API keys all the way to shipping production
+          traffic.
+        </p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          Developer Support Engineer • 2017 — 2021
         </p>
         <p>
           I joined Plaid in 2017 to support thousands of developers building
           with the Plaid API and SDK. I worked closely with the product and
-          engineering teams to triage customer issues and report bugs.
+          engineering teams to triage customer issues and report bugs. I helped
+          grow the Developer Support team from 2 to 10 team members. As a team
+          lead, I was responsible for training and mentoring new team members,
+          as well as improving processes to ensure our team would succeed as
+          Plaid scaled from 100 to 1,000+ employees.
         </p>
-        <p>
-          I helped grow the Developer Support team from a team of 2 to a team of
-          10. As a team lead, I was responsible for training and mentoring new team
-          members, as well as creating internal documentation to ensure our team
-          could succeed as Plaid scaled.
-        </p>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Solutions Engineer • 2021 — 2022
-        </p>
-          I joined the Solutions Engineering team in 2021 to continue my work as
-          a Plaid product expert. I provided hands-on support for customers new
-          to Plaid by guiding them from receiving their API keys all the way to
-          shipping production traffic.
         <p>
           Plaid's culture was the highlight of my 4.5 years — I was so fortunate
           to work with a world-class team! I shared more about my experience on
@@ -65,8 +70,10 @@ export default function Page() {
           href="https://plaid.com/blog/daniel-lacoste-on-the-reward-of-helping-others/">official
           Plaid blog</Link>.
         </p>
-        <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Nintendo of Canada</h2>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <Link href="https://www.nintendo.com/">Nintendo of Canada</Link>
+        </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           Brand Ambassador • 2017
         </p>
@@ -75,6 +82,20 @@ export default function Page() {
           enough to join the team to promote and demo the Nintendo Switch at
           various events across Canada. My main responsibility was to create
           smiles by sharing the Nintendo experience across the country!
+        </p>
+        <hr className="my-6 border-neutral-100 dark:border-neutral-800"/>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          <Link href="https://www.bravurasecurity.com/">Bravura Systems</Link> (fka Hitachi ID Systems)
+        </h2>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+          Support Engineer (Internship) • 2015 — 2016 
+        </p>
+        <p>
+          My first and only internship where I learned how to provide
+          high-quality support for enterprise tech companies. I was lucky to
+          learn from a team of seasoned customer support experts who taught me
+          the skills, tools, and principles that I continue to use today as a
+          support engineer... <span className="font-mono font-extrabold">:wq</span>
         </p>
       </div>
     </section>
