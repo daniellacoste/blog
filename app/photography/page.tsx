@@ -12,18 +12,18 @@ export default async function PhotographyPage() {
   console.log(images);
 
   return (
-    <section>
-      <div className="my-8 columns-2 gap-4 sm:columns-3">
+    <section className="my-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((image) => (
           <Link key={image.src} href={image.href} passHref>
-            <div className="relative mb-4 h-40 sm:h-80 cursor-pointer">
+            <div className="relative w-full h-0 pb-[100%] cursor-pointer">
               <Image
                 alt={image.alt}
                 src={image.src}
-                fill
-                sizes="(max-width: 768px) 213px, 33vw"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
                 priority
-                className="rounded-lg object-cover"
               />
             </div>
           </Link>
