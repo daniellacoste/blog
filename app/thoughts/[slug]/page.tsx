@@ -34,7 +34,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://daniellacoste.com/blog/${post.slug}`,
+      url: `https://daniellacoste.com/thoughts/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -106,7 +106,7 @@ export default function Blog({ params }) {
             image: post.metadata.image
               ? `https://daniellacoste.com${post.metadata.image}`
               : `https://daniellacoste.com/og?title=${post.metadata.title}`,
-            url: `https://daniellacoste.com/blog/${post.slug}`,
+            url: `https://daniellacoste.com/thoughts/${post.slug}`,
             author: {
               '@type': 'Person',
               name: 'Daniel LaCoste',

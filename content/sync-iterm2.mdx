@@ -1,0 +1,104 @@
+---
+title: 'How I sync iTerm2 settings across multiple workstations'
+publishedAt: '2024-04-01'
+summary: ''
+---
+I often find myself changing the settings in [iTerm2](https://iterm2.com/) on my
+work laptop which creates a dissonant state between my work and personal
+laptops. This post serves as a mini guide for how you can keep a consistent
+state between multiple installations of iTerm2 — I assume that if you've found
+this article that you are comfortable with git and navigating your file system
+at the command line.
+
+First, some reflection: in the age of [the cloud](https://xkcd.com/908/), it's
+easy to forget how much we take synced settings for granted. There are great
+options for cloud-based terminals nowadays (e.g. [Warp](https://www.warp.dev/),
+[Fig](https://fig.io/)) and I believe modernizing the terminal is an honorable
+and worthwhile endeavour. I also believe that great products are made by people
+that put extreme focus into one thing — modern terminal apps [are doing just
+that](https://techcrunch.com/2023/08/29/amazon-fig-command-line-terminal-generative-ai/)!
+Warp themselves have written a
+[handful](https://www.warp.dev/blog/fantastic-terminal-programs-and-how-to-quit-them-2)
+of convincing [articles](https://www.warp.dev/compare-terminal-tools) about why
+you should not use an antiquated, non-cloud application… I respect their dogma,
+but after years of using iTerm2's progenitor (iTerm!) I have sheepishly realized
+that I am only human and [my] old habits die hard. Perhaps one day I'll use a
+shiny new terminal application, but for now I'll keep using good ol' iTerm2 —
+onwards!
+
+First, I created a local git repository titled `dotfiles/iterm2` on my work
+laptop. I must copy 2 files from from my work laptop (which contains the
+settings missing on my personal laptop), to `dotfiles/iterm2`:
+
+1. `com.googlecode.iterm2.plist` — in simple terms, this file is responsible for most app settings within your iTerm2 installation
+    - By default this file should be located at `~/Library/Preferences/`
+2. `iterm2-profile.json` — this JSON file maps the settings configured within the `Profiles` menu, which adjusts many visual settings (colors, font, etc)
+    - To export, open iTerm2's settings (`⌘-,`) and navigate to Profiles → Other Actions… → Save Profile as JSON…
+
+    <Image
+        src={`/images/thoughts/sync-iterm2/1.png`}
+        width={1030}
+        height={732}
+    />
+    
+    <Image
+        src={`/images/thoughts/sync-iterm2/2.png`}
+        width={321}
+        height={221}
+    />
+    
+
+After locating and copying both files to `dotfiles/iterm2`, I can add, commit, and push the files to the remote repository. From my personal laptop I can clone the `dotfiles/iterm2` repository to fetch the new files. I can see that both files are now saved to the `dotfiles/iterm2` directory on my personal machine:
+
+<Image
+    src={`/images/thoughts/sync-iterm2/3.png`}
+    width={630}
+    height={259}
+/>
+
+I can load in the `iterm2-profile.json` file by navigating back to Profiles → Other Actions… → Import JSON Profiles…
+
+Finally, I must configure iTerm2 on both machines to load the `com.googlecode.iterm2.plist` file from the `dotfiles/iterm2` directory:
+
+- General → Preferences → Browse → Path to my `dotfiles/iterm2` repository
+    
+<Image
+    src={`/images/thoughts/sync-iterm2/4.png`}
+    width={897}
+    height={355}
+/>
+    
+
+I prefer to use the `Automatically` setting for saving changes — it's up to you if you would rather save changes manually. Now, whenever I make a change to my iTerm2 settings on either machine, my repo will indicate when changes occur:
+
+<Image
+    src={`/images/thoughts/sync-iterm2/5.png`}
+    width={959}
+    height={718}
+/>
+
+From here, I can simply `git` add/commit/push my changes to the remote repo and then pull the latest version from my work laptop. Now you're ~~thinking~~ syncing with ~~portals~~ git!
+
+For configuring the `com.google.iterm2.plist` file, it's possible to simply issue the following commands:
+
+```bash
+# Include the path to your `com.google.iterm2.plist` folder
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/github/dotfiles/iterm2"
+
+# Make iTerm2 load preferences from a custom folder
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+```
+
+---
+
+Thanks for reading this post, I hope it was helpful! Maybe one day I'll expand beyond iTerm2 and finally learn tmux, too. 
+
+<Image
+    src={`/images/thoughts/sync-iterm2/6.png`}
+    width={351}
+    height={370}
+/>
+
+This article was inspired by helpful blog posts from [Sheharyar
+Nasser](https://shyr.io/blog/sync-iterm2-configs) & [Trevor
+Brown](https://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/).

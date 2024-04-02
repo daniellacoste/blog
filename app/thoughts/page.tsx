@@ -5,7 +5,7 @@ import { getViewsCount } from 'app/db/queries';
 import { getBlogPosts } from 'app/db/blog';
 
 export const metadata = {
-  title: 'Thoughts',
+  title: 'thoughts',
   description: 'Read my thoughts on software development, design, and more.',
 };
 
@@ -30,7 +30,7 @@ export default function BlogPage() {
           <Link
             key={post.slug}
             className="flex flex-col space-y-1 mb-4"
-            href={`/blog/${post.slug}`}
+            href={`/thoughts/${post.slug}`}
           >
             <div className="w-full flex flex-col">
               <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">

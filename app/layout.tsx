@@ -5,7 +5,7 @@ import { GeistMono } from 'geist/font/mono';
 import { Navbar } from './components/nav';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { SandpackCSS as SandbankCSS } from './blog/[slug]/sandpack';
+import { SandpackCSS as SandbankCSS } from './thoughts/[slug]/sandpack';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://daniellacoste.com'),
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     default: 'Daniel LaCoste',
     template: '%s | Daniel LaCoste',
   },
-  description: 'Support professional, design engineer in training, hobbyist photographer',
+  description: 'Support professional, design engineer amateur, hobbyist photographer',
   openGraph: {
     title: 'Daniel LaCoste',
-    description: 'Support professional, design engineer in training, hobbyist photographer',
+    description: 'Support professional, design engineer amateur, hobbyist photographer',
     url: 'https://daniellacoste.com',
     siteName: 'Daniel LaCoste',
     locale: 'en_US',
