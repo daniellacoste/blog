@@ -10,12 +10,18 @@ export default {
         mono: ['var(--font-geist-mono)'],
       },
       typography: {
-        quoteless: {
+        // facepalm hack to turn off backticks:
+        // https://github.com/tailwindlabs/tailwindcss-typography/issues/18#issuecomment-733045571
+        DEFAULT: {
           css: {
-            'blockquote p:first-of-type::before': { content: 'none' },
-            'blockquote p:first-of-type::after': { content: 'none' },
-          },
-        },
+            'code::before': {
+              content: 'none'
+            },
+            'code::after': {
+              content: 'none'
+            }
+          }
+        }
       },
     },
   },
